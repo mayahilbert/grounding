@@ -122,6 +122,9 @@ section {
   align-items: center;
   height: 100vh;
 }
+section:not(:first-child) {
+  margin-top: -60vh;
+}
 .project-card-wrapper {
   position: absolute;
   width: 100vw;
