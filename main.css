@@ -146,12 +146,12 @@ section {
     radial-gradient(circle at 50% 51%, #fff 25%, transparent 50%);
   animation: project-gradient 2s 2s linear infinite alternate;
   background-repeat: no-repeat;
-  background-size: 76% 76%;
+  background-size: 69% 69%;
   background-position: center;
 }
 @keyframes project-gradient {
   100% {
-    background-size: 83% 83%;
+    background-size: 75% 75%;
   }
 }
 
