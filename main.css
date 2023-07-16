@@ -125,14 +125,21 @@ section {
 .project-card-wrapper {
   position: absolute;
   width: 100vw;
-  top: 40%;
+  top: 30%;
 }
-.project-card-gradient {
+.project-card-gradient-wrapper {
   width: 100vw;
   height: 115vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   opacity: 0;
   transition: 1.5s;
   z-index: -1;
+}
+.project-card-gradient {
+  width: 80%;
+  height: 100%;
   background-image: radial-gradient(
       circle at 50% 60%,
       #f89affa2 15%,
@@ -155,7 +162,7 @@ section {
   }
 }
 
-.project-card-section a:hover + .project-card-gradient {
+.project-card-section a:hover + .project-card-gradient-wrapper {
   opacity: 1;
 }
 
@@ -167,11 +174,11 @@ section {
   top: 0;
   width: 100%;
   height: 100%;
-  opacity: 0.7;
+  opacity: 0.5;
   background-color: white;
   background-image: url("images/sleeper.jpg");
   background-repeat: no-repeat;
-  background-position: 50% 0;
+  background-position: 50% 50%;
   background-size: cover;
   transition: 2s;
 }
@@ -196,7 +203,7 @@ section {
 .project-card-section a:hover .project-card-inner > h3 {
   opacity: 0;
 }
-.project-card-section a:hover .project-card-section::after {
+.project-card-inner:hover::after {
   opacity: 1;
 }
 .project-card-inner .project-card-arrow svg {
