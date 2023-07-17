@@ -1,8 +1,12 @@
+:root {
+  --base-font-size: calc(0.8rem + 1vw);
+}
+
 html {
   background-color: #70bf81;
   font-family: "Inter", sans-serif;
-  font-size: 4.5vw;
-  line-height: 6.75vw;
+  font-size: var(--base-font-size);
+  line-height: 1.5;
   font-weight: 300;
   overflow-x: hidden;
   color: white;
@@ -13,14 +17,14 @@ body {
   padding-bottom: 5em;
 }
 h1 {
-  font-size: 2em;
+  font-size: calc(var(--base-font-size) * 1.6);
 }
 h2 {
-  font-size: 1.2em;
+  font-size: calc(var(--base-font-size) * 1.2);
   font-weight: 800;
 }
 h3 {
-  font-size: 0.9em;
+  font-size: calc(var(--base-font-size) * 0.9);
   font-weight: 600;
 }
 p {
@@ -252,9 +256,11 @@ section.project-card-section:not(:first-child) {
 
 section.project-description {
   margin: 0 auto;
+  padding: 1.5em;
   max-width: 90vw;
 }
 section.project-description img {
+  width: 100%;
   max-width: 100%;
 }
 
@@ -276,8 +282,6 @@ section.project-description img {
     padding-left: 80px;
   }
   html {
-    font-size: 1.6vw;
-    line-height: 2.4vw;
   }
   section.project-description {
     margin: 0 auto;
@@ -290,20 +294,18 @@ section.project-description img {
 }
 
 @media screen and (min-width: 1000px) {
-  h1 {
-    font-size: 2.4em;
-    line-height: 4.2vw;
+  html {
+    font-size: calc(var(--base-font-size) * 0.8);
+  }
+  /* h1 {
+    font-size: calc(var(--base-font-size) * 1.5);
   }
   h2 {
-    font-size: 1.3em;
-    font-weight: 800;
-    line-height: 1.95vw;
+    font-size: calc(var(--base-font-size) * 1);
   }
   h3 {
-    font-size: 1.1em;
-    font-weight: 600;
-    line-height: 1.65vw;
-  }
+    font-size: calc(var(--base-font-size) * 0.9);
+  } */
   .hero img {
     width: 50vw;
   }
@@ -317,8 +319,7 @@ section.project-description img {
 }
 @media screen and (min-width: 2000px) {
   html {
-    font-size: 1vw;
-    line-height: 1.5vw;
+    font-size: calc(1rem+0.3vw);
   }
 }
 
