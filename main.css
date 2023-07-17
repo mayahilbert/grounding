@@ -237,15 +237,19 @@ section.project-card-section:not(:first-child) {
 .project-card-inner:hover::after {
   opacity: 1;
 }
+
+.project-card-arrow {
+  position: absolute;
+}
 .project-card-inner .project-card-arrow svg {
   width: 3em;
-  position: absolute;
+  /* position: absolute; */
   opacity: 0;
   text-align: center;
   transition-delay: 0.1s;
   transition-duration: 1.3s;
   margin: 0 auto;
-  transform: translateX(-50%);
+  /* transform: translateX(-50%); */
   filter: drop-shadow(3px 5px 10px rgba(116, 230, 139, 0.4));
 }
 
