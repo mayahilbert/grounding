@@ -247,7 +247,7 @@ section.project-card-section:not(:first-child) {
   position: absolute;
 }
 .project-card-inner .project-card-arrow svg {
-  width: 3em;
+  width: 5em;
   /* position: absolute; */
   opacity: 0;
   text-align: center;
