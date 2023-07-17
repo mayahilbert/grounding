@@ -114,10 +114,15 @@ li:not(:last-child) {
 .inner-page nav {
   display: flex;
   justify-content: space-between;
+  align-content: flex-end;
   font-size: 0.8em;
   font-weight: 600;
   padding: 1em;
   background: linear-gradient(to right, #f46166, #89a2e8 40%, #fdc555 100%);
+}
+
+.inner-page nav a:not(:first-child) {
+  margin-top: 0.2em;
 }
 .inner-page nav a.logo-link {
   height: 100%;
