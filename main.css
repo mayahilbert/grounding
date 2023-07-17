@@ -97,8 +97,11 @@ li:not(:last-child) {
   text-underline-offset: 0.05em;
   text-decoration-thickness: 0.15em;
   text-decoration-color: #7f96ff;
+  transition: 1s;
 }
-
+.hero nav ul a:hover {
+  text-decoration-color: #ffec51;
+}
 main {
   margin: auto;
   display: grid;
@@ -121,6 +124,7 @@ section {
   justify-content: center;
   align-items: center;
   height: 100vh;
+  margin-top: -30vh;
 }
 section:not(:first-child) {
   margin-top: -60vh;
@@ -161,7 +165,8 @@ section:not(:first-child) {
 }
 @keyframes project-gradient {
   100% {
-    background-size: 75% 75%;
+    opacity: 0.6;
+    background-size: 78% 75%;
   }
 }
 
@@ -223,6 +228,7 @@ section:not(:first-child) {
 
 .project-card-section a:hover .project-card-arrow svg {
   opacity: 1;
+  z-index: 2;
 }
 
 @media screen and (min-width: 700px) {
