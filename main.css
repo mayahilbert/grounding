@@ -1,8 +1,11 @@
 html {
   background-color: #70bf81;
   font-family: "Inter", sans-serif;
-  font-size: 3vw;
+  font-size: 4.5vw;
+  line-height: 6.75vw;
+  font-weight: 300;
   overflow-x: hidden;
+  color: white;
 }
 body {
   margin: 0;
@@ -20,8 +23,21 @@ h3 {
   font-size: 0.9em;
   font-weight: 600;
 }
+p {
+  font-weight: 300;
+}
 a {
   text-decoration: none;
+  color: white;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-underline-offset: 0.05em;
+  text-decoration-thickness: 0.15em;
+  text-decoration-color: #7f96ff;
+  transition: 1s;
+}
+a:hover {
+  text-decoration-color: #ffec51;
 }
 .visually-hidden {
   border: 0;
@@ -59,7 +75,8 @@ a {
 .hero-bg-inner {
   height: 100%;
   margin: auto;
-  background: no-repeat center/80% radial-gradient(#2787bd, transparent 70%);
+  background: url("noise.svg"),
+    no-repeat center/80% radial-gradient(#2787bd, transparent 70%);
 }
 
 .hero nav {
@@ -71,7 +88,7 @@ a {
   height: 100vh;
 }
 .hero img {
-  max-width: 97vw;
+  max-width: 80vw;
   padding-bottom: 3vw;
   padding-left: 2vw;
   transform: rotate(7deg);
@@ -81,7 +98,7 @@ a {
   list-style: none;
   color: white;
   font-weight: bold;
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .hero nav ul li {
@@ -90,17 +107,22 @@ a {
 li:not(:last-child) {
   margin-bottom: 1em;
 }
-.hero nav ul a {
-  color: white;
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-  text-underline-offset: 0.05em;
-  text-decoration-thickness: 0.15em;
-  text-decoration-color: #7f96ff;
-  transition: 1s;
+
+.inner-page nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8em;
+  font-weight: 600;
+  padding: 1em;
+  background: linear-gradient(to right, #f46166, #89a2e8 40%, #fdc555 100%);
 }
-.hero nav ul a:hover {
-  text-decoration-color: #ffec51;
+.inner-page nav a.logo-link {
+  height: 100%;
+  width: 60vw;
+}
+.inner-page nav a img {
+  max-width: 30vw;
+  transform: rotate(4deg);
 }
 main {
   margin: auto;
@@ -108,25 +130,25 @@ main {
   gap: 5em;
 }
 
-section {
+section.project-card-section {
   width: 100vw;
 }
 .project-card {
   height: 35vh;
   margin: auto;
-  width: 70vw;
+  width: 80vw;
   background: white;
 }
 
-section {
+section.project-card-section {
   display: flex;
   position: relative;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin-top: -30vh;
+  margin-top: -24vh;
 }
-section:not(:first-child) {
+section.project-card-section:not(:first-child) {
   margin-top: -60vh;
 }
 .project-card-wrapper {
@@ -145,17 +167,13 @@ section:not(:first-child) {
   z-index: -1;
 }
 .project-card-gradient {
-  width: 80%;
+  width: 85%;
   height: 100%;
-  background-image: radial-gradient(
-      circle at 50% 60%,
-      #f89affa2 15%,
-      transparent 23%
-    ),
-    radial-gradient(circle at 55% 76%, #f89affd5 2%, transparent 14%),
+  background: radial-gradient(circle at 50% 60%, #f89affa2 15%, transparent 23%),
+    radial-gradient(circle at 60% 30%, #f89affd5 2%, transparent 14%),
     radial-gradient(circle at 40% 62%, #9a73f6d0 15%, transparent 30%),
     radial-gradient(circle at 55% 55%, #80eaef 25%, transparent 40%),
-    radial-gradient(circle at 60% 59%, #9b73f6 15%, transparent 30%),
+    radial-gradient(circle at 54% 45%, #80eaef 15%, transparent 30%),
     radial-gradient(circle at 49% 48%, #12ff45 25%, transparent 50%),
     radial-gradient(circle at 50% 51%, #fff 25%, transparent 50%);
   animation: project-gradient 2s 2s linear infinite alternate;
@@ -198,6 +216,7 @@ section:not(:first-child) {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 
 .project-card-inner > * {
@@ -215,7 +234,7 @@ section:not(:first-child) {
   opacity: 1;
 }
 .project-card-inner .project-card-arrow svg {
-  width: 5.5em;
+  width: 3em;
   position: absolute;
   opacity: 0;
   text-align: center;
@@ -231,6 +250,20 @@ section:not(:first-child) {
   z-index: 2;
 }
 
+section.project-description {
+  margin: 0 auto;
+  max-width: 90vw;
+}
+section.project-description img {
+  max-width: 100%;
+}
+
+.social-link {
+  font-weight: 600;
+}
+.sleeper-page {
+  background-color: #56a6ec;
+}
 @media screen and (min-width: 700px) {
   .hero nav ul li {
     display: inline;
@@ -243,30 +276,49 @@ section:not(:first-child) {
     padding-left: 80px;
   }
   html {
-    font-size: 1.4vw;
+    font-size: 1.6vw;
+    line-height: 2.4vw;
+  }
+  section.project-description {
+    margin: 0 auto;
+    padding-top: 2em;
+    max-width: 60vw;
+  }
+  section.project-card-section:not(:first-child) {
+    margin-top: -52vh;
   }
 }
 
 @media screen and (min-width: 1000px) {
+  h1 {
+    font-size: 2.4em;
+    line-height: 4.2vw;
+  }
   h2 {
-    font-size: 1.7em;
+    font-size: 1.3em;
     font-weight: 800;
+    line-height: 1.95vw;
   }
   h3 {
-    font-size: 1.3em;
+    font-size: 1.1em;
     font-weight: 600;
+    line-height: 1.65vw;
   }
   .hero img {
-    width: 60vw;
+    width: 50vw;
   }
   .project-card {
-    width: 50vw;
-    height: 40vh;
+    width: 55vw;
+    height: 45vh;
+  }
+  .inner-page nav a img {
+    max-width: 16vw;
   }
 }
 @media screen and (min-width: 2000px) {
   html {
     font-size: 1vw;
+    line-height: 1.5vw;
   }
 }
 
