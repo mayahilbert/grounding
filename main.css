@@ -79,8 +79,7 @@ a:hover {
 .hero-bg-inner {
   height: 100%;
   margin: auto;
-  background: url("noise.svg"),
-    no-repeat center/80% radial-gradient(#2787bd, transparent 70%);
+  background: no-repeat center/80% radial-gradient(#2787bd, transparent 70%);
 }
 
 .hero nav {
