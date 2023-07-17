@@ -101,7 +101,6 @@ a:hover {
   list-style: none;
   color: white;
   font-weight: bold;
-  font-size: 1em;
 }
 
 .hero nav ul li {
@@ -113,31 +112,33 @@ li:not(:last-child) {
 
 .inner-page nav {
   display: flex;
-  justify-content: space-between;
-  align-content: flex-end;
-  font-size: 0.8em;
+  flex-direction: column;
   font-weight: 600;
   padding: 1em;
   background: linear-gradient(to right, #f46166, #89a2e8 40%, #fdc555 100%);
 }
 
 .inner-page nav a:not(:first-child) {
-  margin-top: 0.2em;
+  margin-top: 0.4vw;
 }
 .inner-page nav a.logo-link {
   height: 100%;
-  width: 60vw;
+  width: 80vw;
 }
 .inner-page nav a img {
-  max-width: 30vw;
+  max-width: 80vw;
   transform: rotate(4deg);
 }
-main {
+main.home-main {
   margin: auto;
   display: grid;
   gap: 5em;
 }
-
+main.project-main {
+  margin: auto;
+  display: grid;
+  gap: 1em;
+}
 section.project-card-section {
   width: 100vw;
 }
@@ -262,7 +263,7 @@ section.project-card-section:not(:first-child) {
   z-index: 2;
 }
 
-section.project-description {
+.project-main {
   margin: 0 auto;
   padding: 1.5em;
   max-width: 90vw;
@@ -276,7 +277,7 @@ section.project-description img {
   font-weight: 600;
 }
 .sleeper-page {
-  background-color: #56a6ec;
+  background-color: #2e7abd;
 }
 @media screen and (min-width: 700px) {
   .hero nav ul li {
@@ -291,19 +292,27 @@ section.project-description img {
   }
   html {
   }
-  section.project-description {
+  .project-main {
     margin: 0 auto;
     padding-top: 2em;
-    max-width: 60vw;
+    max-width: 50vw;
   }
   section.project-card-section:not(:first-child) {
     margin-top: -52vh;
+  }
+
+  .inner-page nav {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+  .inner-page nav a img {
+    max-width: 30vw;
   }
 }
 
 @media screen and (min-width: 1000px) {
   html {
-    font-size: calc(var(--base-font-size) * 0.8);
+    font-size: calc(var(--base-font-size) * 0.7);
   }
   /* h1 {
     font-size: calc(var(--base-font-size) * 1.5);
@@ -320,6 +329,9 @@ section.project-description img {
   .project-card {
     width: 55vw;
     height: 45vh;
+  }
+  .inner-page nav a.logo-link {
+    width: 60vw;
   }
   .inner-page nav a img {
     max-width: 16vw;
