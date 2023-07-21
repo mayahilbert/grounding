@@ -11,7 +11,15 @@ html {
   overflow-x: hidden;
   color: white;
   scrollbar-color: #ffffff #7f96ff;
+  scroll-behavior: smooth;
 }
+
+@media (prefers-reduced-motion) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -166,7 +174,7 @@ li:not(:last-child) {
 }
 
 .inner-page nav a:not(:first-child) {
-  margin-top: 0.4vw;
+  /* margin-top: 0.4vw; */
 }
 .inner-page nav a.logo-link {
   height: 100%;
@@ -266,6 +274,49 @@ section.project-card-section:not(:first-child) {
   background-size: cover;
   transition: 2s;
 }
+
+.card-chen::after {
+  background-image: url("images/chen.jpg");
+}
+.card-jezewska::after {
+  background-image: url("images/jezewska.png");
+}
+.card-capshaw::after {
+  background-image: url("images/capshaw-mack.jpg");
+}
+.card-clay::after {
+  background-image: url("images/clay.jpg");
+}
+.card-soren::after {
+  background-image: url("images/soren.jpg");
+}
+.card-benitez::after {
+  background-image: url("images/");
+}
+.card-stern::after {
+  background-image: url("images/stern.jpeg");
+}
+.card-charles::after {
+  background-image: url("images/charles.jpg");
+}
+.card-gawrysiak::after {
+  background-image: url("images/gawrysiak.jpg");
+}
+.card-mcdonald::after {
+  background-image: url("images/mcdonald.jpg");
+}
+.card-niceley::after {
+  background-image: url("images/niceley.jpg");
+}
+.card-huang::after {
+  background-image: url("images/huang.png");
+}
+.card-sleeper::after {
+  background-image: url("images/sleeper.jpg");
+}
+.card-wiesenberger::after {
+  background-image: url("images/wiesenberger.jpg");
+}
 .project-card-inner {
   width: 100%;
   height: 100%;
@@ -325,13 +376,54 @@ section.project-description img {
 .social-link {
   font-weight: 600;
 }
-.sleeper-page {
+.inner-page {
   background-color: #2e7abd;
 }
+.inner-page nav img {
+  padding-top: 2em;
+}
+
+.project-main-display {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.click-view-note {
+  position: absolute;
+  font-weight: bold;
+  background-color: #4c69ec;
+  padding: 0.2em 1em 0.2em 1em;
+  margin-bottom: 5em;
+  max-width: 60vw;
+  opacity: 0.8;
+}
+.back-artworks-link {
+  position: fixed;
+  right: 0.2em;
+  top: 0;
+  background-color: #70bf81;
+  padding: 0.2em 1em 0.2em 1em;
+}
 @media screen and (min-width: 700px) {
+  .inner-page nav img {
+    padding-top: 0;
+  }
+  .back-artworks-link {
+    top: 1em;
+    right: 1em;
+    padding: 0;
+    background-color: transparent;
+  }
+  .click-view-note {
+    font-size: calc(var(--base-font-size) * 0.8);
+    transition: 0.3s;
+  }
+  .click-view-note:hover {
+    border-bottom: 0.2em solid #ffec51;
+  }
   .hero ul.artist-list {
     display: block;
-    padding-left: 0;
+    padding-left: 0px;
   }
   nav {
     position: relative;
