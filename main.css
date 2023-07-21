@@ -219,7 +219,7 @@ section.project-card-section:not(:first-child) {
 .project-card-wrapper {
   position: absolute;
   width: 100vw;
-  top: 30%;
+  top: 36%;
   pointer-events: auto;
 }
 .project-card-gradient-wrapper {
@@ -404,7 +404,18 @@ section.project-description img {
   background-color: #70bf81;
   padding: 0.2em 1em 0.2em 1em;
 }
+.footer-home {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.back-top-link {
+  font-weight: 700;
+}
 @media screen and (min-width: 700px) {
+  .project-card-wrapper {
+    top: 30%;
+  }
   .inner-page nav img {
     padding-top: 0;
   }
@@ -438,6 +449,7 @@ section.project-description img {
   .hero ul.artist-list li::before {
     content: "\22F1";
     margin-right: 0.3em;
+    color: #ffec51;
   }
   ul.artist-list {
     text-align: center;
