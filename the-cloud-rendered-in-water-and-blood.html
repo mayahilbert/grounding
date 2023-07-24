@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grounding - The Cloud Rendered in Water & Blood</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="zoomist.min.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+      integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="zoomist.min.js"></script>
+  </head>
+  <body class="inner-page">
+    <nav>
+      <a class="logo-link" href="index.html"
+        ><img src="images/grounding-logo-final.svg" /></a
+      ><a class="back-artworks-link" href="index.html">Back to artworks</a>
+    </nav>
+    <main class="project-main">
+      <section class="project-intro">
+        <p class="artist-name">Liam Wiesenberger</p>
+
+        <h1>The Cloud Rendered in Water & Blood</h1>
+      </section>
+      <div class="project-main-display">
+        <div
+          id="cloud"
+          data-zoomist-src="images/the-cloud-rendered-in-water-and-blood.jpg"
+        ></div>
+        <noscript>
+          <img src="images/the-cloud-rendered-in-water-and-blood.jpg" />
+        </noscript>
+      </div>
+      <section class="project-description">
+        <p>
+          There is something duplicitous about our idea of “the cloud”.
+          <em>The Cloud Rendered in Water & Blood</em> grounds the ephemeral
+          metaphor of “the cloud” in the very real physical infrastructure and
+          labor that makes it possible. We think of our digital data and
+          processes as decentralized and vaporous, but they are created and
+          maintained by very tangible submarine cables, data centers, human
+          workers, and natural resources. This piece is heavily inspired by
+          concepts explored in
+          <a
+            href="https://mitpress.mit.edu/9780262529969/a-prehistory-of-the-cloud/"
+            >Tung Hui-Hu’s A Prehistory of the Cloud</a
+          >.
+        </p>
+      </section>
+      <section class="bio">
+        <h2>Artist Bio</h2>
+        <p>
+          Liam Wiesenberger is a German-American designer, dancer, and artist
+          based in Brooklyn. His tech background informs how he views people and
+          the spaces they inhabit. He explores the mediums of embroidery, spray
+          paint stenciling, and coding with APIs, primarily uncovering topics of
+          love and loss.
+        </p>
+      </section>
+    </main>
+    <script>
+      new Zoomist("#cloud", {
+        slider: false,
+        zoomer: false,
+        maxRatio: 2.6,
+      });
+    </script>
+  </body>
+</html>

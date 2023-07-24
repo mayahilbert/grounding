@@ -45,6 +45,7 @@ body {
 }
 h1 {
   font-size: calc(var(--base-font-size) * 1.6);
+  line-height: 1.2;
 }
 h2 {
   font-size: calc(var(--base-font-size) * 1.2);
@@ -191,8 +192,12 @@ main.home-main {
 }
 main.project-main {
   margin: auto;
-  display: grid;
-  gap: 1em;
+  /* display: grid;
+  gap: 1em; */
+}
+
+.project-main-display > * {
+  max-width: 100%;
 }
 section.project-card-section {
   width: 100vw;
@@ -291,13 +296,13 @@ section.project-card-section:not(:first-child) {
   background-image: url("images/soren.jpg");
 }
 .card-benitez::after {
-  background-image: url("images/");
+  background-image: url("images/jose.png");
 }
 .card-stern::after {
   background-image: url("images/stern.jpeg");
 }
 .card-charles::after {
-  background-image: url("images/charles.jpg");
+  background-image: url("images/cooling-off-2.jpg");
 }
 .card-gawrysiak::after {
   background-image: url("images/gawrysiak.jpg");
@@ -362,17 +367,31 @@ section.project-card-section:not(:first-child) {
   opacity: 1;
   z-index: 2;
 }
-
 .project-main {
+  padding: 1.5em;
+}
+.project-intro,
+.project-description,
+.bio {
+  max-width: 90vw;
+  margin: 0 auto;
+}
+.bio {
+  padding-top: 1em;
+}
+/* .project-main {
   margin: 0 auto;
   padding: 1.5em;
   max-width: 90vw;
+} */
+.project-main-display {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 2em;
+  max-width: 100vw;
 }
-section.project-description img {
-  width: 100%;
-  max-width: 100%;
-}
-
 .social-link {
   font-weight: 600;
 }
@@ -383,11 +402,6 @@ section.project-description img {
   padding-top: 2em;
 }
 
-.project-main-display {
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
 .click-view-note {
   position: absolute;
   font-weight: bold;
@@ -412,6 +426,48 @@ section.project-description img {
 .back-top-link {
   font-weight: 700;
 }
+
+.vid-wrapper {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  padding: 56.3% 0 0 0;
+  position: relative;
+  margin-bottom: 1em;
+}
+.vid-wrapper iframe {
+  /* height: 50vh;
+  width: 85vw; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+small {
+  text-transform: uppercase;
+  letter-spacing: calc(var(--base-font-size) * 0.08);
+}
+.caption {
+  padding: 0.5em 0 1em 0;
+}
+.rightalign {
+  text-align: right;
+  width: 100%;
+  display: inline-block;
+}
+.artist-name {
+  margin-bottom: -1em;
+  font-weight: 500;
+  letter-spacing: calc(var(--base-font-size) * 0.05);
+  opacity: 0.8;
+}
+.human-nature-grid,
+.cooling-off-grid {
+  display: grid;
+  gap: 3em;
+}
+
 @media screen and (min-width: 700px) {
   .project-card-wrapper {
     top: 30%;
@@ -461,11 +517,30 @@ section.project-description img {
     width: 70vw;
     padding-left: 1.3vw;
   }
-  html {
-  }
   .project-main {
-    margin: 0 auto;
     padding-top: 2em;
+  }
+  .project-intro,
+  .project-description,
+  .bio,
+  .project-main {
+    max-width: 50vw;
+  }
+
+  .project-main-display > * {
+    max-width: 50vw;
+  }
+  .project-main-display > noscript > * {
+    max-width: 50vw;
+  }
+  .project-main-display .lightbox-thumb img {
+    max-width: 50vw;
+  }
+  .thin-display {
+    width: 100vw;
+    margin: 0 auto;
+  }
+  .thin-display > * {
     max-width: 50vw;
   }
   section.project-card-section:not(:first-child) {
@@ -479,6 +554,11 @@ section.project-description img {
   .inner-page nav a img {
     max-width: 30vw;
   }
+  /* .cooling-off-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.5em;
+  } */
 }
 
 @media screen and (min-width: 1000px) {
