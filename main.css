@@ -296,7 +296,7 @@ section.project-card-section:not(:first-child) {
   background-image: url("images/soren.jpg");
 }
 .card-benitez::after {
-  background-image: url("images/jose.png");
+  background-image: url("images/jose.jpg");
 }
 .card-stern::after {
   background-image: url("images/stern.jpeg");
