@@ -1,0 +1,72 @@
+.container {
+  font-size: 16px;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  min-height: 97vh;
+  flex-direction: column;
+  margin: 1.5em 1.3em 1.5em 1.3em;
+
+
+}
+
+.inner_container {
+  max-width: 100%;
+
+}
+
+.image {
+  max-height: 60vh;
+  max-width: 100%;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  appearance: none;
+  background-color: inherit;
+  transition: transform 0.7s ease-in-out;
+  margin: 2em 0 2em 0;
+
+}
+
+h1 {
+  font-family: Helvetica, 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+}
+
+.button-inner-container {
+  margin: 0 30px;
+}
+
+@media screen and (min-width: 700px) {
+
+  h1 {
+    font-size: 20px;
+
+  }
+
+  .button-container {
+    transform: rotate(-90deg);
+
+  }
+
+  .button-inner-container {
+    margin: 0;
+  }
+
+  button {
+    margin: 0;
+  }
+
+  .image {
+    max-height: 90vh;
+  }
+
+  .container {
+    flex-direction: row;
+    margin: 0 10vh 0 10vh;
+
+  }
+}
