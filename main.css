@@ -682,6 +682,7 @@ hr {
     gap: 1em;
     padding: 2em 0;
     background-color: black;
+    font-size: 0;
   }
 
   .caption {
