@@ -156,24 +156,34 @@ nav {
 }
 
 .hero nav ul,
-.hero ul.artist-list {
+.hero ul.artist-list,
+.footer-project ul.artist-list {
   color: white;
   font-weight: bold;
 }
 
-.hero ul.artist-list {
+.hero ul.artist-list,
+.footer-project ul.artist-list {
   max-width: 60vw;
   line-height: calc((var(--base-font-size)) * 1.6);
 }
 
 .hero nav ul li,
-.hero ul.artist-list li {
+.hero ul.artist-list li,
+.footer-project ul.artist-list li {
   display: block;
 }
 
-.hero ul.artist-list li a {
+.hero ul.artist-list li a,
+.footer-project ul.artist-list li a {
   white-space: nowrap;
   color: white;
+}
+
+.footer-project ul.artist-list {
+  display: block;
+  padding: 0px;
+
 }
 
 li:not(:last-child) {
@@ -450,6 +460,12 @@ section.project-card-section:not(:first-child) {
   font-weight: 600;
 }
 
+.footer-project {
+  padding: 1.5em;
+  margin-top: 6em;
+}
+
+
 .inner-page {
   background-color: #2e7abd;
 }
@@ -559,6 +575,16 @@ hr {
 }
 
 @media screen and (min-width: 700px) {
+
+  .footer-project {
+    text-align: center;
+
+  }
+
+  .footer-project ul.artist-list {
+    margin: 0 auto;
+  }
+
   .project-card-wrapper {
     top: 30%;
   }
@@ -596,12 +622,15 @@ hr {
     margin-top: 7em;
   }
 
+
   .hero nav ul li,
-  .hero ul.artist-list li {
+  .hero ul.artist-list li,
+  .footer-project ul.artist-list li {
     display: inline-block;
   }
 
-  .hero ul.artist-list li::before {
+  .hero ul.artist-list li::before,
+  .footer-project ul.artist-list li::before {
     content: "\22F1";
     margin-right: 0.3em;
     color: #ffec51;
