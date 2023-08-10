@@ -56,3 +56,10 @@ function updateGradient() {
 }
 
 setInterval(updateGradient, 10);
+
+// Add a click handler to all dropdowns on the page
+for (var e of document.querySelectorAll(".dropdown button")) {
+  e.addEventListener("click", function (evt) {
+    evt.target.parentElement.classList.toggle("open");
+  });
+}

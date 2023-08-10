@@ -768,11 +768,13 @@ hr {
 .flex-container {
   display: flex;
   flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  margin-top: -40vh;
 }
 
 .dropdown {
-  float: left;
-  overflow: hidden;
+  text-align: center;
 }
 
 .dropdown .dropbtn {
@@ -789,7 +791,6 @@ hr {
 
 .dropdown-content {
   display: none;
-  position: absolute;
   background-color: rgba(45, 173, 180, 0.9);
   min-width: 90%;
   margin: 0 auto;
@@ -830,7 +831,7 @@ hr {
   background-color: rgba(79, 194, 200, 0.9);
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown.open .dropdown-content {
   display: block;
 }
 
